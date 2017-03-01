@@ -1,0 +1,1032 @@
+Model {
+  Name			  "test_adc_clip2"
+  Version		  7.0
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.1"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Nov 02 21:00:32 2009"
+  Creator		  "dsp"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "dsp"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Nov 02 21:27:14 2009"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.3.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.3.0"
+	  StartTime		  "0.0"
+	  StopTime		  "600"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.3.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.3.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.3.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.3.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    2
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      PulseType		      "Sample based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Period		      "2"
+      PulseWidth	      "1"
+      PhaseDelay	      "0"
+      SampleTime	      "1"
+      VectorParams1D	      on
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "test_adc_clip2"
+    Location		    [2, 70, 1863, 1060]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      " System Generator"
+      Tag		      "genX"
+      Ports		      []
+      Position		      [347, 260, 398, 310]
+      ShowName		      off
+      AttributesFormatString  "System\\nGenerator"
+      UserDataPersistent      on
+      UserData		      "DataTag0"
+      SourceBlock	      "xbsIndex_r4/ System Generator"
+      SourceType	      "Xilinx System Generator Block"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      infoedit		      " System Generator"
+      xilinxfamily	      "virtex2p"
+      part		      "xc2vp50"
+      speed		      "-7"
+      package		      "ff1152"
+      synthesis_tool	      "XST"
+      clock_wrapper	      "Clock Enables"
+      directory		      "./i_128w_2k_10_r306/sysgen"
+      testbench		      off
+      simulink_period	      "1"
+      sysclk_period	      "5"
+      dcm_input_clock_period  "100"
+      incr_netlist	      off
+      trim_vbits	      "Everywhere in SubSystem"
+      dbl_ovrd		      "According to Block Masks"
+      core_generation	      "According to Block Masks"
+      run_coregen	      off
+      deprecated_control      off
+      eval_field	      "0"
+      has_advanced_control    "0"
+      sggui_pos		      "-1,-1,-1,-1"
+      block_type	      "sysgen"
+      block_version	      "10.1.3"
+      sg_icon_stat	      "51,50,-1,-1,red,beige,0,07734,right"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 51 51 0 ],[0 0 50 50 ],[0.93 0.92 0.86]);\npatch([12 4 16 4 12 25 29 33 47 36 25 17 29 17 25 36 47 33 29 25 12 ],[5 13 25 37 45 45 41 45 45 34 45 37 25 13 5 16 5 5 9 5 5 ],[0.6 0.2 0.25]);\nplot([0 51 51 0 0 ],[0 0 50 50 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\nfprintf('','COMMENT: end icon text');\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Counter"
+      Ports		      [0, 1]
+      Position		      [150, 85, 210, 145]
+      SourceBlock	      "xbsIndex_r4/Counter"
+      SourceType	      "Xilinx Counter Block"
+      infoedit		      "Hardware notes: Free running counters are the least expensive in hardware.  A count limited counter is implemented by combining a counter with a comparator."
+      cnt_type		      "Free Running"
+      cnt_to		      "Inf"
+      operation		      "Up"
+      start_count	      "0"
+      cnt_by_val	      "1/128"
+      arith_type	      "Signed  (2's comp)"
+      n_bits		      "8"
+      bin_pt		      "7"
+      load_pin		      off
+      rst		      off
+      en		      off
+      explicit_period	      "on"
+      period		      "1"
+      dbl_ovrd		      off
+      use_behavioral_HDL      off
+      use_rpm		      off
+      implementation	      "Fabric"
+      xl_use_area	      off
+      xl_area		      "[0,0,0,0,0,0,0]"
+      has_advanced_control    "0"
+      sggui_pos		      "20,20,348,619"
+      block_type	      "counter"
+      block_version	      "10.1.3"
+      sg_icon_stat	      "60,60,1,1,white,blue,0,a170c862,right"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 60 60 0 ],[0 0 60 60 ],[0.77 0.82 0.91]);\npatch([14 4 18 4 14 30 34 38 55 42 29 20 35 20 29 42 55 38 34 30 14 ],[6 16 30 44 54 54 50 54 54 41 54 45 30 15 6 19 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 60 60 0 0 ],[0 0 60 60 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('output',1,'out');\nfprintf('','COMMENT: end icon text');\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Gateway Out"
+      Ports		      [1, 1]
+      Position		      [410, 79, 465, 101]
+      ShowName		      off
+      SourceBlock	      "xbsIndex_r4/Gateway Out"
+      SourceType	      "Xilinx Gateway Out Block"
+      infoedit		      "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, or fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depending on how they are configured."
+      hdl_port		      off
+      timing_constraint	      "None"
+      locs_specified	      off
+      LOCs		      "{}"
+      xl_use_area	      off
+      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+      has_advanced_control    "0"
+      sggui_pos		      "20,20,336,386"
+      block_type	      "gatewayout"
+      block_version	      "10.1.3"
+      sg_icon_stat	      "55,22,1,1,white,grey,0,b3a044a9,right"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.88 0.88 0.88]);\npatch([22 18 23 18 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 55 55 0 0 ],[0 0 22 22 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{11pt} Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Gateway Out1"
+      Ports		      [1, 1]
+      Position		      [410, 99, 465, 121]
+      ShowName		      off
+      SourceBlock	      "xbsIndex_r4/Gateway Out"
+      SourceType	      "Xilinx Gateway Out Block"
+      infoedit		      "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, or fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depending on how they are configured."
+      hdl_port		      off
+      timing_constraint	      "None"
+      locs_specified	      off
+      LOCs		      "{}"
+      xl_use_area	      off
+      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+      has_advanced_control    "0"
+      sggui_pos		      "20,20,336,386"
+      block_type	      "gatewayout"
+      block_version	      "10.1.3"
+      sg_icon_stat	      "55,22,1,1,white,grey,0,b3a044a9,right"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.88 0.88 0.88]);\npatch([22 18 23 18 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 55 55 0 0 ],[0 0 22 22 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{11pt} Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Gateway Out2"
+      Ports		      [1, 1]
+      Position		      [410, 119, 465, 141]
+      ShowName		      off
+      SourceBlock	      "xbsIndex_r4/Gateway Out"
+      SourceType	      "Xilinx Gateway Out Block"
+      infoedit		      "Gateway out block.  Converts Xilinx fixed point inputs into ouputs of type Simulink integer, double, or fixed point.<P><P>Hardware notes:  In hardware these blocks become top level output ports or are discarded, depending on how they are configured."
+      hdl_port		      off
+      timing_constraint	      "None"
+      locs_specified	      off
+      LOCs		      "{}"
+      xl_use_area	      off
+      xl_area		      "[0, 0, 0, 0, 0, 0, 0]"
+      has_advanced_control    "0"
+      sggui_pos		      "20,20,336,386"
+      block_type	      "gatewayout"
+      block_version	      "10.1.3"
+      sg_icon_stat	      "55,22,1,1,white,grey,0,b3a044a9,right"
+      sg_mask_display	      "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 ],[0 0 22 22 ],[0.88 0.88 0.88]);\npatch([22 18 23 18 22 28 30 32 38 33 28 25 31 25 28 33 38 32 30 28 22 ],[2 6 11 16 20 20 18 20 20 15 20 17 11 5 2 7 2 2 4 2 2 ],[0.98 0.96 0.92]);\nplot([0 55 55 0 0 ],[0 0 22 22 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,' ');\ncolor('black');port_label('output',1,'\\fontsize{11pt} Out ','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [3]
+      Position		      [495, 77, 525, 143]
+      ShowName		      off
+      Floating		      off
+      Location		      [1, 45, 1866, 1079]
+      Open		      on
+      NumInputPorts	      "3"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+      }
+      YMin		      "0~-1e+022~-5"
+      YMax		      "2~1.7e+023~5"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "XSG core config"
+      Tag		      "xps:xsg"
+      Ports		      []
+      Position		      [415, 259, 461, 302]
+      BackgroundColor	      "[1.000000, 1.000000, 0.000000]"
+      SourceBlock	      "xps_library/XSG core config"
+      SourceType	      "xsg core config"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      hw_sys		      "iBOB"
+      ibob_linux	      off
+      clk_src		      "adc0_clk"
+      iBOB_clk_src	      "adc0_clk"
+      BEE2_ctrl_clk_src	      "sys_clk"
+      BEE2_usr_clk_src	      "sys_clk"
+      ROACH_clk_src	      "arb_clk"
+      CORR_clk_src	      "sys_clk"
+      gpio_clk_io_group	      "iBOB:sma"
+      gpio_clk_bit_index      "0"
+      clk_rate		      "200"
+      sample_period	      "1"
+      synthesis_tool	      "XST"
+      mpc_type		      "powerpc405"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "adc_clip_detect0"
+      Ports		      [1, 1]
+      Position		      [275, 145, 350, 165]
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskPromptString	      "Number of ADC bits"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskVariables	      "n_bits=@1;"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "8"
+      System {
+	Name			"adc_clip_detect0"
+	Location		[297, 570, 897, 730]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "adc_in"
+	  Position		  [145, 48, 175, 62]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Constant"
+	  Ports			  [0, 1]
+	  Position		  [150, 95, 275, 125]
+	  SourceBlock		  "xbsIndex_r4/Constant"
+	  SourceType		  "Xilinx Constant Block Block"
+	  arith_type		  "Unsigned"
+	  const			  "((2^(n_bits-1)-1)/(2^(n_bits-1)))^2"
+	  n_bits		  "2*n_bits +1"
+	  bin_pt		  "n_bits*2"
+	  explicit_period	  on
+	  period		  "1"
+	  dsp48_infoedit	  "The use of this block for DSP48 instructions is deprecated.  Please use the Opmode block."
+	  equ			  "P=C"
+	  opselect		  "C"
+	  inp2			  "PCIN>>17"
+	  opr			  "+"
+	  inp1			  "P"
+	  carry			  "CIN"
+	  dbl_ovrd		  off
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,20,400,346"
+	  block_type		  "constant"
+	  block_version		  "10.1.3"
+	  sg_icon_stat		  "125,30,1,1,white,blue,0,25ad0514,right"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 ],[0 0 26 26 ],[0.77 0.82 0.91]);\npatch([20 16 22 16 20 27 29 31 38 32 26 22 28 22 26 32 38 31 29 27 20 ],[3 7 13 19 23 23 21 23 23 17 23 19 13 7 3 9 3 3 5 3 3 ],[0.98 0.96 0.92]);\nplot([0 55 55 0 0 ],[0 0 26 26 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('output',1,'0.98443603515625');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Mult"
+	  Ports			  [2, 1]
+	  Position		  [220, 25, 275, 80]
+	  SourceBlock		  "xbsIndex_r4/Mult"
+	  SourceType		  "Xilinx Multiplier Block"
+	  infoedit		  "Hardware notes: To use the internal pipeline stage of the dedicated multiplier you must select 'Pipeline for maximum performance'."
+	  precision		  "Full"
+	  arith_type		  "Signed  (2's comp)"
+	  n_bits		  "16"
+	  bin_pt		  "14"
+	  quantization		  "Truncate"
+	  overflow		  "Wrap"
+	  en			  off
+	  latency		  "3"
+	  dbl_ovrd		  off
+	  use_behavioral_HDL	  off
+	  use_embedded		  on
+	  opt			  "Speed"
+	  optimum_pipeline	  on
+	  xl_use_area		  off
+	  xl_area		  "[0,0,0,0,0,0,0]"
+	  pipeline		  "on"
+	  use_rpm		  "on"
+	  placement_style	  "Triangular"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,20,348,433"
+	  block_type		  "mult"
+	  block_version		  "10.1.3"
+	  sg_icon_stat		  "55,55,1,1,white,blue,0,9c0d74db,right"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 ],[0 0 55 55 ],[0.77 0.82 0.91]);\npatch([13 4 17 4 13 28 32 36 52 40 28 19 32 19 28 40 52 36 32 28 13 ],[6 15 28 41 50 50 46 50 50 38 50 41 28 15 6 18 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 55 55 0 0 ],[0 0 55 55 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'a');\ncolor('black');port_label('input',2,'b');\ncolor('black');port_label('output',1,'(ab)');\ncolor('black');disp('\\newline\\bf{}\\newlinez^{-3}','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Relational"
+	  Ports			  [2, 1]
+	  Position		  [320, 42, 375, 98]
+	  SourceBlock		  "xbsIndex_r4/Relational"
+	  SourceType		  "Xilinx Arithmetic Relational Operator Block"
+	  mode			  "a>=b"
+	  en			  off
+	  latency		  "1"
+	  dbl_ovrd		  off
+	  xl_use_area		  off
+	  xl_area		  "[0,0,0,0,0,0,0]"
+	  has_advanced_control	  "0"
+	  sggui_pos		  "20,20,348,193"
+	  block_type		  "relational"
+	  block_version		  "10.1.3"
+	  sg_icon_stat		  "55,56,1,1,white,blue,0,48ab8ed9,right"
+	  sg_mask_display	  "fprintf('','COMMENT: begin icon graphics');\npatch([0 55 55 0 ],[0 0 56 56 ],[0.77 0.82 0.91]);\npatch([13 4 17 4 13 28 32 36 52 40 28 19 32 19 28 40 52 36 32 28 13 ],[6 15 28 41 50 50 46 50 50 38 50 41 28 15 6 18 6 6 10 6 6 ],[0.98 0.96 0.92]);\nplot([0 55 55 0 0 ],[0 0 56 56 0 ]);\nfprintf('','COMMENT: end icon graphics');\nfprintf('','COMMENT: begin icon text');\ncolor('black');port_label('input',1,'a');\ncolor('black');port_label('input',2,'b');\ncolor('black');disp('\\newline\\bf{a>=b}\\newlinez^{-1}','texmode','on');\nfprintf('','COMMENT: end icon text');\n"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "clip"
+	  Position		  [400, 63, 430, 77]
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  SrcBlock		  "adc_in"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, 10]
+	    DstBlock		    "Mult"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, -15]
+	    DstBlock		    "Mult"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Mult"
+	  SrcPort		  1
+	  DstBlock		  "Relational"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -25]
+	  DstBlock		  "Relational"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Relational"
+	  SrcPort		  1
+	  DstBlock		  "clip"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Gateway Out1"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Gateway Out"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Gateway Out2"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Counter"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	Points			[0, 40]
+	DstBlock		"adc_clip_detect0"
+	DstPort			1
+      }
+      Branch {
+	Points			[55, 0; 0, -5]
+	Branch {
+	  DstBlock		  "Gateway Out1"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, -20]
+	  DstBlock		  "Gateway Out"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "adc_clip_detect0"
+      SrcPort		      1
+      Points		      [20, 0; 0, -25]
+      DstBlock		      "Gateway Out2"
+      DstPort		      1
+    }
+  }
+}
+MatData {
+  NumRecords		  1
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    0!X   8    (     @         %    \"     $    !     0         %  0 !@    $    ,    <V%V960 =V]R:P        X   #P#@  !@    @    \"          4    (     0    $    !          4 !  ,     0   !@   !S:&%R960       !C;VUP:6QA=&EO;@ .    6 0   8    (     @         %    \"     $    !     0         %  0 $P    $   \"8    8V]M<&EL871I;VX          &-O;7!I;&%T:6]N7VQU=     !S:6UU;&EN:U]P97)I;V0     :6YC<E]N971L:7-T         '1R:6U?=F)I=',           !D8FQ?;W9R9               9&5P<F5C871E9%]C;VYT<F]L &)L;V-K7VEC;VY?9&ES<&QA>0 .    .     8    (    !          %    \"     $    '     0         0    !P   '1A<F=E=#( #@   +@!   &    \"     (         !0    @    !     0    $         !0 $  <    !    #@   &ME>7,   !V86QU97,    .    N     8    (     0         %    \"     $    \"     0         .    0     8    (    !          %    \"     $    +     0         0    \"P   $A$3\"!.971L:7-T       .    0     8    (    !          %    \"     $    +     0         0    \"P   $Y'0R!.971L:7-T       .    J     8    (     0         %    \"     $    \"     0         .    .     8    (    !          %    \"     $    '     0         0    !P   '1A<F=E=#$ #@   #@    &    \"     0         !0    @    !    !P    $         $     <   !T87)G970R  X    P    !@    @    $          4    (     0    $    !         !   0 Q    #@   #     &    \"     0         !0    @    !     P    $         $  # &]F9@ .    2     8    (    !          %    \"     $    7     0         0    %P   $5V97)Y=VAE<F4@:6X@4W5B4WES=&5M  X   !(    !@    @    $          4    (     0   !@    !         !     8    06-C;W)D:6YG('1O($)L;V-K($UA<VMS#@   #     &    \"     0         !0    @    !     P    $         $  # &]F9@ .    .     8    (    !          %    \"     $    '     0         0    !P   $1E9F%U;'0 #@   #@*   &    \"     (         !0    @    !     0    $         !0 $  @    !    $    '1A<F=E=#$ =&%R9V5T,@ .    ^ ,   8    (     @         %    \"     $    !     0         %  0 $     $   #     >&EL:6YX9F%M:6QY     '!A<G0               !S<&5E9               <&%C:V%G90           '-Y;G1H97-I<U]T;V]L  !D:7)E8W1O<GD         =&5S=&)E;F-H         '-Y<V-L:U]P97)I;V0   !C;W)E7V=E;F5R871I;VX <G5N7V-O<F5G96X      &5V86Q?9FEE;&0       !C;&]C:U]L;V,         #@   #@    &    \"     0         !0    @    !    \"     $         $     @   !6:7)T97@R4 X    X    !@    @    $          4    (     0    <    !         !     '    >&,R=G U,  .    ,     8    (    !          %    \"     $    \"     0         0  ( +3<   X    X    !@    @    $          4    (     0    8    !         !     &    9F8Q,34R   .    0     8    (    !          %    \"     $    ,     0         0    #    %-Y;G!L:69Y(%!R;P     .    4     8    (    !          %    \"     $    =     0         0    '0   \"XO8VY?:5\\Q,CAW7S)K7S$P7W(S,#0O<WES9V5N    #@   #     &    \"     0         !0    @    !     P    $         $  # &]F9@ .    ,     8    (    !          %    \"     $    !     0         0  $ -0    X   !(    !@    @    $          4    (     0   !@    !         !     8    06-C;W)D:6YG('1O($)L;V-K($UA<VMS#@   #     &    \"     0         !0    @    !     P    $         $  # &]F9@ .    ,     8    (    !          %    \"     $    !     0         0  $ ,     X    P    !@    @    $          4    (               !         !          #@   .@%   &    \"     (         !0    @    !     0    $         !0 $ !<    !    60$  &YG8U]C;VYF:6<                 <WEN=&AE<VES7VQA;F=U86=E      !S>6YT:&5S:7-?=&]O;            'AI;&EN>&9A;6EL>0              <&%R=                         !S<&5E9                        '1E<W1B96YC:                   <&%C:V%G90                    !D:7)E8W1O<GD                  '-Y<V-L:U]P97)I;V0             8VQO8VM?=W)A<'!E<@            !D8VU?:6YP=71?8VQO8VM?<&5R:6]D &-E7V-L<@                      <')E<V5R=F5?:&EE<F%R8VAY      !C;&]C:U]L;V,                            .    Z     8    (     @         %    \"     $    !     0         %  0 %0    $    J    :6YC;'5D95]C;&]C:W=R87!P97( :6YC;'5D95]C9@                      #@   #@    &    \"     8         !0    @    !     0    $         \"0    @           #P/PX    X    !@    @    &          4    (     0    $    !          D    (               .    ,     8    (    !          %    \"     $    $     0         0  0 5DA$3 X    P    !@    @    $          4    (     0    ,    !         !   P!84U0 #@   #@    &    \"     0         !0    @    !    \"     $         $     @   !6:7)T97@R4 X    X    !@    @    $          4    (     0    <    !         !     '    >&,R=G U,  .    ,     8    (    !          %    \"     $    \"     0         0  ( +3<   X    P    !@    @    $          4    (     0    ,    !         !   P!O9F8 #@   #@    &    \"     0         !0    @    !    !@    $         $     8   !F9C$Q-3(   X   !(    !@    @    $          4    (     0   !$    !         !     1    +B]U;G1I=&QE9\"]S>7-G96X         #@   #     &    \"     0         !0    @    !     0    $         $  ! #4    .    0     8    (    !          %    \"     $    -     0         0    #0   $-L;V-K($5N86)L97,    .    ,     8    (    !          %    \"     $    #     0         0  , ,3 P  X    X    !@    @    &          4    (     0    $    !          D    (               .    .     8    (    !@         %    \"     $    !     0         )    \"               #@   #     &    \"     0         !0    @               $         $          .    ^ X   8    (     @         %    \"     $    !     0         %  0 #     $    8    <VAA<F5D        8V]M<&EL871I;VX #@   %@$   &    \"     (         !0    @    !     0    $         !0 $ !,    !    F    &-O;7!I;&%T:6]N          !C;VUP:6QA=&EO;E]L=70     <VEM=6QI;FM?<&5R:6]D     &EN8W)?;F5T;&ES=         !T<FEM7W9B:71S            9&)L7V]V<F0              &1E<')E8V%T961?8V]N=')O; !B;&]C:U]I8V]N7V1I<W!L87D #@   #@    &    \"     0         !0    @    !    !P    $         $     <   !T87)G970R  X   \"X 0  !@    @    \"          4    (     0    $    !          4 !  '     0    X   !K97ES    =F%L=65S    #@   +@    &    \"     $         !0    @    !     @    $         #@   $     &    \"     0         !0    @    !    \"P    $         $     L   !(1$P@3F5T;&ES=       #@   $     &    \"     0         !0    @    !    \"P    $         $     L   !.1T,@3F5T;&ES=       #@   *@    &    \"     $         !0    @    !     @    $         #@   #@    &    \"     0         !0    @    !    !P    $         $     <   !T87)G970Q  X    X    !@    @    $          4    (     0    <    !         !     '    =&%R9V5T,@ .    ,     8    (    !          %    \"     $    !     0         0  $ ,0    X    P    !@    @    $          4    (     0    ,    !         !   P!O9F8 #@   $@    &    \"     0         !0    @    !    %P    $         $    !<   !%=F5R>7=H97)E(&EN(%-U8E-Y<W1E;0 .    2     8    (    !          %    \"     $    8     0         0    &    $%C8V]R9&EN9R!T;R!\";&]C:R!-87-K<PX    P    !@    @    $          4    (     0    ,    !         !   P!O9F8 #@   #@    &    \"     0         !0    @    !    !P    $         $     <   !$969A=6QT  X   ! \"@  !@    @    \"          4    (     0    $    !          4 !  (     0   !    !T87)G970Q '1A<F=E=#( #@   /@#   &    \"     (         !0    @    !     0    $         !0 $ !     !    P    'AI;&EN>&9A;6EL>0    !P87)T                <W!E960              '!A8VMA9V4           !S>6YT:&5S:7-?=&]O;   9&ER96-T;W)Y         '1E<W1B96YC:         !S>7-C;&M?<&5R:6]D    8V]R95]G96YE<F%T:6]N ')U;E]C;W)E9V5N      !E=F%L7V9I96QD        8VQO8VM?;&]C          X    X    !@    @    $          4    (     0    @    !         !     (    5FER=&5X,E .    .     8    (    !          %    \"     $    '     0         0    !P   'AC,G9P-3  #@   #     &    \"     0         !0    @    !     @    $         $  \" \"TW   .    .     8    (    !          %    \"     $    &     0         0    !@   &9F,3$U,@  #@   $     &    \"     0         !0    @    !    #     $         $     P   !3>6YP;&EF>2!0<F\\     #@   %     &    \"     0         !0    @    !    '0    $         $    !T    N+V-N7VE?,3(X=U\\R:U\\Q,%]R,S T+W-Y<V=E;@    X    P    !@    @    $          4    (     0    ,    !         !   P!O9F8 #@   #     &    \"     0         !0    @    !     0    $         $  ! #4    .    2     8    (    !          %    \"     $    8     0         0    &    $%C8V]R9&EN9R!T;R!\";&]C:R!-87-K<PX    P    !@    @    $          4    (     0    ,    !         !   P!O9F8 #@   #     &    \"     0         !0    @    !     0    $         $  ! #     .    ,     8    (    !          %    \"                0         0          X   #P!0  !@    @    \"          4    (     0    $    !          4 !  7     0   %D!  !N9V-?8V]N9FEG                 '-Y;G1H97-I<U]L86YG=6%G90      <WEN=&AE<VES7W1O;VP           !X:6QI;GAF86UI;'D              '!A<G0                         <W!E960                       !T97-T8F5N8V@                  '!A8VMA9V4                     9&ER96-T;W)Y                  !S>7-C;&M?<&5R:6]D             &-L;V-K7W=R87!P97(             9&-M7VEN<'5T7V-L;V-K7W!E<FEO9 !C95]C;'(                      '!R97-E<G9E7VAI97)A<F-H>0      8VQO8VM?;&]C                            #@   .@    &    \"     (         !0    @    !     0    $         !0 $ !4    !    *@   &EN8VQU9&5?8VQO8VMW<F%P<&5R &EN8VQU9&5?8V8                       X    X    !@    @    &          4    (     0    $    !          D    (            \\#\\.    .     8    (    !@         %    \"     $    !     0         )    \"               #@   #     &    \"     0         !0    @    !    !     $         $  $ %9(1$P.    ,     8    (    !          %    \"     $    #     0         0  , 6%-4  X    X    !@    @    $          4    (     0    @    !         !     (    =FER=&5X,G .    .     8    (    !          %    \"     $    '     0         0    !P   'AC,G9P-3  #@   #     &    \"     0         !0    @    !     @    $         $  \" \"TW   .    ,     8    (    !          %    \"     $    #     0         0  , ;V9F  X    X    !@    @    $          4    (     0    8    !         !     &    9F8Q,34R   .    4     8    (    !          %    \"     $    :     0         0    &@   \"XO:5\\Q,CAW7S)K7S$P7W(S,#8O<WES9V5N        #@   #     &    \"     0         !0    @    !     0    $         $  ! #4    .    0     8    (    !          %    \"     $    -     0         0    #0   $-L;V-K($5N86)L97,    .    ,     8    (    !          %    \"     $    #     0         0  , ,3 P  X    X    !@    @    &          4    (     0    $    !          D    (               .    .     8    (    !@         %    \"     $    !     0         )    \"               #@   #     &    \"     0         !0    @               $         $          "
+  }
+}
